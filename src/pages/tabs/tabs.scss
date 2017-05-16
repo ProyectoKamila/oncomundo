@@ -1,0 +1,74 @@
+page-tabs {
+  .fondo2{
+    //background-image: url('assets/img/fondo-4-.jpg');
+    background: rgba(255, 181, 246, 0.68);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+     .menu-inner{
+       background: transparent!important;
+     }
+  .tabbar {
+    justify-content: center;
+  }
+
+  .tabs .tabbar{
+    background: #ecd4d0;
+  }
+  .tabs .tab-button[aria-selected=true] .tab-button-icon{
+    color: #45b19a;
+
+  }
+  .tabs .tab-button[aria-selected=true]{
+    color: #45b19a;
+  }
+  .tab-button {
+    max-width: 200px;
+  }
+  .boton-top{
+      position: absolute;
+      top: 5px;
+      left: 5px;
+  }
+  .boton-mid{
+    background: transparent;
+    box-shadow: none;
+    font-size: 25px;
+    padding: 0px 15px;
+  }
+  .pa50{
+	height: 50px;
+}
+.div-mar{
+	margin: 0px 0 40px 0;
+  .item{
+    text-align: center
+  }
+}
+.item{
+	background: transparent;
+    color: white;
+}
+.text-center2{
+	text-align: justify;
+	font-size: 22px;
+
+}
+#menusito{
+  .item-md.item-block .item-inner{
+    border: 0px!important
+  }
+}
+.indicatorSegment
+    {
+        -webkit-transition: 0.3s all;
+        -moz-transition:  0.3s all;
+        -o-transition:  0.3s all;
+        transition:  0.3s all;
+        transform-origin: top 0 left 0;
+        width:50%;
+        height:2px;
+        background-color:rgba(138, 34, 40, 0.98) !important;;
+    }
+}

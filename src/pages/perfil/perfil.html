@@ -1,0 +1,94 @@
+<ion-header>
+
+  <ion-toolbar class="rosa">
+     	<ion-title text-center>Perfil</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content class="fondo" id="perfil">
+	<ion-grid>
+		<ion-row>
+			<ion-col width-50 class="back-trans" ngIF="dates.photo">
+				<ion-thumbnail (click)="presentActionSheet();"><img src="{{dates.photo}}" class="image"></ion-thumbnail>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+
+	<ion-list>
+
+    <button ion-button round class="botonn" id="pais">
+			<ion-label><h4 class="tipo">Pais</h4></ion-label>
+			<ion-select [(ngModel)]="dates.pais" required [ngModelOptions]="{standalone: true} " (ngModelChange)="change('pais')">
+				<ion-option value="Peru">Peru</ion-option>
+				<ion-option value="Colombia">Colombia</ion-option>
+				<ion-option value="Venezuela">Venezuela</ion-option>
+				<ion-option value="otros">otros</ion-option>
+			</ion-select>
+    </button>
+
+    <button ion-button round class="botonn" id="estado">
+			<ion-label><h4 class="tipo">Estado</h4></ion-label>
+			<ion-select [(ngModel)]="dates.estado" required [ngModelOptions]="{standalone: true} " (ngModelChange)="change('estado')">
+				<ion-option value="Caracas">Caracas</ion-option>
+				<ion-option value="Merida">Merida</ion-option>
+				<ion-option value="Zulia">Zulia</ion-option>
+				<ion-option value="otros">otros</ion-option>
+			</ion-select>
+    </button>
+
+    <button ion-button round class="botonn" id="sexo">
+			<ion-label><h4 class="tipo">Sexo</h4></ion-label>
+			<ion-select [(ngModel)]="dates.sexo" required [ngModelOptions]="{standalone: true} " (ngModelChange)="change('sexo')">
+				<ion-option value="Caracas">Masculino</ion-option>
+				<ion-option value="Merida">Femenino</ion-option>
+			</ion-select>
+    </button>
+
+    <button ion-button round class="botonn" ngIF="edad" id="edad"> 
+			<ion-item class="input-color">
+				<ion-label fixed>EDAD:</ion-label>
+				<ion-input value="{{edad}}" [(ngModel)]="dates.edad" type="text"  name="edad" required [ngModelOptions]="{standalone: true}" (ngModelChange)="change('edad')" ></ion-input>
+			</ion-item>
+    </button>
+
+    <button ion-button round class="botonn" id="direccion">
+			<ion-item class="input-color">
+				<ion-label fixed>DIRECCION:</ion-label>
+				<ion-input type="text" [(ngModel)]="dates.direccion" name="direccion"  required [ngModelOptions]="{standalone: true} " (ngModelChange)="change('direccion')" ></ion-input>
+			</ion-item>
+    </button>
+
+    <button ion-button round class="botonn" id="tipo">
+			<ion-label><h4 class="tipo">Patologia</h4></ion-label>
+			<ion-select [(ngModel)]="dates.tipo" required [ngModelOptions]="{standalone: true} " (ngModelChange)="change('tipo')">
+
+				<ion-option value="1">Cáncer de seno</ion-option>
+				<ion-option value="2">Cáncer de Páncreas</ion-option>
+				<ion-option value="3">Cáncer de Hígado</ion-option>
+				<ion-option value="4">Cancer de pene</ion-option>
+				<ion-option value="5">Cáncer de intestino delgado</ion-option>
+				<ion-option value="6">Cáncer de colon y recto</ion-option>
+				<ion-option value="7">Cáncer de Ovario</ion-option>
+				<ion-option value="8">Cáncer de Estomago</ion-option>
+				<ion-option value="9">Cáncer de Vejiga</ion-option>
+				<ion-option value="10">Cáncer de pulmón</ion-option>
+				<ion-option value="11">Cáncer cabeza y cuello</ion-option>
+				<ion-option value="12">Tumores cerebrales</ion-option>
+				<ion-option value="13">Cáncer de endometrio</ion-option>
+				<ion-option value="14">Cáncer de próstata</ion-option>
+				<ion-option value="15">Cáncer de cuello uterino</ion-option>
+				
+
+			</ion-select>
+    </button>
+
+		<div text-center style="margin: 20px 0;">
+			<form (ngSubmit)="ionperfil()">
+				<button ion-button color="rosado" round>Registrar</button>
+			</form>  
+		</div>
+		
+	</ion-list>
+</ion-content>

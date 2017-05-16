@@ -1,0 +1,47 @@
+page-logindoc {
+    body, span, button, h1, h2, h3, h4, h5, h6 , p {
+	font-family: 'helvetica' !important;
+	}
+        .fondo{
+        background: rgba(69,177,154,1);
+        background: -moz-linear-gradient(top, rgba(69,177,154,1) 0%, rgba(236,212,208,1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(69,177,154,1)), color-stop(100%, rgba(236,212,208,1)));
+        background: -webkit-linear-gradient(top, rgba(69,177,154,1) 0%, rgba(236,212,208,1) 100%);
+        background: -o-linear-gradient(top, rgba(69,177,154,1) 0%, rgba(236,212,208,1) 100%);
+        background: -ms-linear-gradient(top, rgba(69,177,154,1) 0%, rgba(236,212,208,1) 100%);
+        background: linear-gradient(to bottom, rgba(69,177,154,1) 0%, rgba(236,212,208,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45b19a', endColorstr='#ecd4d0', GradientType=0 );
+         }
+        .pa50{
+            height: 22px;
+        }
+       //header
+        .toolbar-title-md{
+            padding: 0 40px 0 0px;
+        }
+        .rosa{
+            .toolbar-background{
+                background: transparent;
+            }
+        }
+        .header-md::after{
+            background-image: none!important;
+        }
+        .button-md:hover:not(.disable-hover){
+            background-color: #45b19a;
+        }
+        //content
+        .item{
+            background: transparent;
+        }
+        .button-round{
+            padding: 0 6rem;
+        }
+        .botonn{
+        padding: 20px 1rem !important;
+        background: transparent;
+        border: 2px solid #45b19a;
+        margin-top: 15px;
+    }
+        //footer
+}

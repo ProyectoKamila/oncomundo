@@ -1,0 +1,100 @@
+page-perfil, #perfil {
+    body, span, button, h1, h2, h3, h4, h5, h6 , p {
+	font-family: 'helvetica' !important;
+	}
+    //header
+    .fondo{
+        background-image: url(../assets/img/fondo.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+        .rosa{
+            .toolbar-background{
+                background: #ecd4d0;
+            }
+        }
+        .header-md::after{
+            background-image: none!important;
+        }
+    .back-trans{
+		background: white;
+	    border-radius: 100%;
+	}
+    .icon-perfil{
+        color: black!important;
+    }
+    .grid{
+        background: #ecd4d0; 
+    }
+    .icon-perfil{
+		font-size: 30px;
+	    padding: 38px;
+	    color: white;
+	    width: 100%;
+    	text-align: center;
+
+	}
+    .image{
+        border-radius:100%;
+        margin: 0 auto;
+        width:100%; 
+        height: 105px;
+        max-height: 105px;
+    }
+    ion-header{
+        border: 1px solid #ecd4d0
+    }
+    //content
+    .botonn{
+        padding: 20px 1rem !important;
+        background: transparent;
+        border: 2px solid #ecd4d0;
+        margin-top: 15px;
+        margin-left: 15px;
+        width: 90%;
+    }
+    .tipo{
+		margin-left: 15px;
+    	float: left;
+	}
+    .button-inner{
+        color: rgba(0, 0, 0, 0.5);
+    }
+    .item{
+        background: transparent;
+        color:black!important;
+    }
+    .text-input{
+        text-align: end
+    }
+    .item-md.item-block .item-inner{
+        border-bottom:0px;
+    }
+    .select{
+        padding: 18px 11px 10px 10px;
+    }
+    .list .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child{
+            border-bottom-color: #ecd4d0;
+            box-shadow:none;
+    }
+    .list .item-input.input-has-focus:last-child{
+            border-bottom-color: #ecd4d0;
+            box-shadow:none;
+    }
+    .row{
+        margin: 0 33% 15px 33%;
+    }
+    //footer
+    .button-round{
+            padding: 0px 6rem;
+        }
+        .transpa{
+            .toolbar-background{
+                background: transparent;
+            }
+        }
+        .footer-md::before{
+            background-image: none;
+        }
+}

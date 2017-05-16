@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-navbar class="rosa">
+    <ion-title text-center>Registro</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="fondo" padding>
+	<ion-list>
+    <button ion-button round class="botonn" id="name">
+		<ion-item class="input-color">
+      <ion-label fixed>Nombres:</ion-label>
+			<ion-input type="text" [(ngModel)]="dates.nombre" required [ngModelOptions]= "{standalone: true}" (ngModelChange)="change('name')"></ion-input>
+		</ion-item>
+    </button>
+
+    <button ion-button round class="botonn" id="apellido">
+    <ion-item class="input-color">
+      <ion-label fixed>Apellidos:</ion-label>
+			<ion-input type="text" [(ngModel)]="dates.apellido" required [ngModelOptions]= "{standalone: true}" (ngModelChange)="change('apellido')"></ion-input>
+		</ion-item>
+    </button>
+
+    <button ion-button round class="botonn" id="ci">
+    <ion-item class="input-color">
+      <ion-label fixed>DNI:</ion-label>
+			<ion-input type="text"  name="documento" [(ngModel)]="dates.ci"  [ngModelOptions]="{standalone: true}" (ngModelChange)="change('ci')"></ion-input>
+		</ion-item>
+    </button>
+
+    <button ion-button round class="botonn" id="email">
+		<ion-item class="input-color">
+      <ion-label fixed>Correo:</ion-label>
+			<ion-input  [(ngModel)]="dates.email" type="email"  name="email" required [ngModelOptions]="{standalone: true}" (ngModelChange)="change('email')"></ion-input>
+		</ion-item>
+    </button>
+
+    <button ion-button round class="botonn" id="telefono">
+		<ion-item class="input-color">
+      <ion-label fixed>Telefono:</ion-label>
+			<ion-input type="tel" [(ngModel)]="dates.telefono" name="telefono"  required [ngModelOptions]="{standalone: true} " (ngModelChange)="change('telefono')"></ion-input>
+		</ion-item>
+    </button>
+
+    <button ion-button round class="botonn" id="password">
+		<ion-item class="input-color">
+      <ion-label fixed>Contraseña:</ion-label>
+			<ion-input type="password " [(ngModel)]="dates.password" name="password" required [ngModelOptions]="{standalone: true} " (ngModelChange)="change('password')"></ion-input>
+		</ion-item>
+    </button>
+
+    <button ion-button round class="botonn" id="password2">
+    <ion-item class="input-color">
+      <ion-label fixed>Repetir Contraseña:</ion-label>
+			<ion-input type="password " [(ngModel)]="dates.password2" name="Repetir" required [ngModelOptions]="{standalone: true} " (ngModelChange)="change('password2')"></ion-input>
+		</ion-item>
+    </button>
+		
+	</ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar text-center class="transpa">
+    <form (ngSubmit)="registrar()">
+      <button ion-button color="rosado" round>Registrar</button>
+    </form>    
+  </ion-toolbar>
+</ion-footer>
+

@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar class="rosa" >
+    <ion-title text-center>Paciente</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="fondo">
+	<div class="pa50"></div>  
+	  <div text-center>
+			<div><img src="assets/img/logo-blanco.png"/></div>
+		</div>
+	<div class="pa50"></div>
+
+	<ion-list>
+
+		<button ion-button round class="botonn" id="email">
+		<ion-item class="input-color">
+			<ion-label fixed>
+			  Email :
+			</ion-label>
+			<ion-input [(ngModel)]="email" type="email" (ngModelChange)="change('email')"></ion-input>
+		</ion-item>
+		</button>
+
+		<button ion-button round class="botonn" id="password">
+		<ion-item class="input-color">
+			<ion-label fixed>
+				Password :
+			</ion-label>
+			<ion-input [(ngModel)]="password"  type="password" (ngModelChange)="change('password')"></ion-input>
+		</ion-item>
+		</button>
+
+		
+
+	</ion-list>
+
+  <ion-grid class="rosado">
+    <ion-row class="row">
+      <ion-col text-center col-12>
+        <button ion-button color="rosado" round (click)="perfil()">Ingresar</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+	<ion-grid>
+		<ion-row>
+			<ion-col text-center col-12>
+			  <ion-label (click)="contrasena()">¿Olvido Su contraseña?</ion-label>
+      </ion-col>
+		</ion-row>
+	</ion-grid>
+
+</ion-content>

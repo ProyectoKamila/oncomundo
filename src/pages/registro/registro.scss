@@ -1,0 +1,61 @@
+page-registro {
+    body, span, button, h1, h2, h3, h4, h5, h6 , p {
+	font-family: 'helvetica' !important;
+	}
+    //header
+    .toolbar-title-md{
+            padding: 0 40px 0 0px;
+        }
+        .rosa{
+            .toolbar-background{
+                background: #ecd4d0;
+            }
+        }
+        .header-md::after{
+            background-image: none!important;
+        }
+        .item-input .label{
+            color: white;
+        }
+        
+    //contain
+    .fondo{
+        background: url(../assets/img/fondo-4-.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+    }
+    .item{
+        background: transparent
+    }
+    .item-md.item-block .item-inner{
+        border-bottom:0px;
+    }
+    .botonn{
+        padding: 20px 1rem !important;
+        background: transparent;
+        border: 2px solid rgb(236, 212, 208);
+        margin-top: 15px;
+    }
+    
+    .list .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child{
+            border-bottom-color: #ecd4d0;
+            box-shadow:none;
+    }
+    .list .item-input.input-has-focus:last-child{
+            border-bottom-color: #ecd4d0;
+            box-shadow:none;
+    }
+    //footer
+    .button-round{
+            padding: 0px 6rem;
+        }
+        .transpa{
+            .toolbar-background{
+                background: transparent;
+            }
+        }
+        .footer-md::before{
+            background-image: none;
+        }
+}

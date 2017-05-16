@@ -1,0 +1,17 @@
+page-perfildoc {
+    body, span, button, h1, h2, h3, h4, h5, h6 , p {
+	font-family: 'helvetica' !important;
+	}
+
+    //header
+    .fondo{
+        background-image: url(../assets/img/ERROR.jpg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .icon-perfil{
+        color: black!important;
+    }
+
+}

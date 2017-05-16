@@ -1,0 +1,46 @@
+page-login {
+    body, span, button, h1, h2, h3, h4, h5, h6 , p {
+	font-family: 'helvetica' !important;
+	}
+    .fondo{
+        background: rgba(240,222,219,1);
+        background: -webkit-linear-gradient(rgba(240,222,219,1) 0%, rgba(240,222,219,1) 62%, rgba(102,209,184,1) 100%);
+        background: -moz-linear-gradient(rgba(240,222,219,1) 0%, rgba(240,222,219,1) 62%, rgba(102,209,184,1) 100%);
+        background: -o-linear-gradient(rgba(240,222,219,1) 0%, rgba(240,222,219,1) 62%, rgba(102,209,184,1) 100%);
+        background: linear-gradient(rgba(240,222,219,1) 0%, rgba(240,222,219,1) 62%, rgba(102,209,184,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0dedb', endColorstr='#66d1b8', GradientType=0 );        }
+        .pa50{
+            height: 10px;
+        }
+        //header
+        .toolbar-title-md{
+            padding: 0 40px 0 0px;
+        }
+        .rosa{
+            .toolbar-background{
+                background: transparent;
+            }
+        }
+        .header-md::after{
+            background-image: none!important;
+        }
+        .button-md:hover:not(.disable-hover){
+            background-color: #ecd4d0;
+        }
+        
+        //content
+        .item{
+            background: transparent;
+        }
+        .button-round{
+            padding: 0 6rem;
+        }
+        .botonn{
+        padding: 20px 1rem !important;
+        background: transparent;
+        border: 2px solid rgb(236, 212, 208);
+        margin-top: 15px;
+    }
+        //footer
+
+}

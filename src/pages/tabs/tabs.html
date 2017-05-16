@@ -1,0 +1,64 @@
+<!--
+  Generated template for the Tabs page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-menu [content]='menu' >
+	<ion-content class="fondo2">
+
+		<div class="pa50"></div>
+
+		<ion-list class="div-mar">
+		  <ion-item>
+		    <ion-thumbnail >
+		      <img ngIF="img" src="{{img}}" style="border-radius:50%;margin: 0 auto;">
+		    </ion-thumbnail>
+		    <h2 ngIF="nombre" >{{nombre}}</h2>
+		    <p ngIF="correo">{{correo}}</p>
+		  </ion-item>
+		</ion-list>
+
+		<ion-list id="menusito">
+			<button ion-item class="text-center2">
+        <ion-icon name="star"></ion-icon>
+			Inicio
+			</button>
+			<button ion-item class="text-center2">
+        <ion-icon name="star"></ion-icon>
+			Citas
+			</button>
+			<button ion-item class="text-center2" >
+        <ion-icon name="star"></ion-icon>
+			Chat
+			</button>
+			<button ion-item class="text-center2">
+        <ion-icon name="star"></ion-icon>
+			Progreso
+			</button>
+			<button ion-item class="text-center2" (click)="salir()" >
+        <ion-icon name="star"></ion-icon>
+			Salir
+			</button>  
+		</ion-list>
+
+
+	</ion-content>
+</ion-menu>
+<ion-nav id="menu" #menu [root]="rootPage"></ion-nav> 
+	    
+
+  <ion-tabs [selectedIndex]="mySelectedIndex">
+    <ion-tab [root]="tab1" tabTitle="consultas" tabIcon="clipboard"></ion-tab>
+    <ion-tab [root]="tab2" tabTitle="pendientes" tabIcon="list-box"></ion-tab>
+    <ion-tab [root]="tab3" tabTitle="oncochat" tabIcon="chatbubbles"></ion-tab>
+    <ion-tab [root]="tab4" tabTitle="perfil" tabIcon="contact"></ion-tab>
+  </ion-tabs>
+
+<div class="boton-top">
+  <button ion-button menuToggle class="boton-mid">
+      		<ion-icon name="menu"></ion-icon>
+  </button>
+</div>
+
+
