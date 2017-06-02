@@ -1,5 +1,26 @@
 page-oncochat {
-   
+   .fondo{
+        background: rgba(240,222,219,1);
+        background: -webkit-linear-gradient(rgba(240,222,219,1) 0%, rgba(240,222,219,1) 62%, rgba(102,209,184,1) 100%);
+        background: -moz-linear-gradient(rgba(240,222,219,1) 0%, rgba(240,222,219,1) 62%, rgba(102,209,184,1) 100%);
+        background: -o-linear-gradient(rgba(240,222,219,1) 0%, rgba(240,222,219,1) 62%, rgba(102,209,184,1) 100%);
+        background: linear-gradient(rgba(240,222,219,1) 0%, rgba(240,222,219,1) 62%, rgba(102,209,184,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0dedb', endColorstr='#66d1b8', GradientType=0 );        }
+ .rosa{
+            .toolbar-background{
+                background: #ecd4d0;
+            }
+        }
+        .header-md::after{
+            background-image: none!important;
+        }
+    .back-trans{
+		background: white;
+	    border-radius: 100%;
+	}
+    .icon-perfil{
+        color: black!important;
+    }
 /*Custom Color*/
 .button.button-grey {
     border-color: #585858;

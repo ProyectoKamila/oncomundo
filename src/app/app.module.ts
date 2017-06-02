@@ -22,6 +22,12 @@ import { ConsultasPage } from '../pages/consultas/consultas';
 import { OncochatPage } from '../pages/oncochat/oncochat';
 import { PendientesPage } from '../pages/pendientes/pendientes';
 import { TabsPage } from '../pages/tabs/tabs';
+import { ModalpendientesPage } from '../pages/modalpendientes/modalpendientes';
+import { ConsultaMPage } from '../pages/consulta-m/consulta-m';
+import { ConsultaonlinePage } from '../pages/consultaonline/consultaonline';
+import { ConsultaMPerfilPage } from '../pages/consulta-m-perfil/consulta-m-perfil';
+
+
 
 
 const cloudSettings: CloudSettings = {
@@ -55,7 +61,11 @@ const cloudSettings: CloudSettings = {
     ConsultasPage,
     OncochatPage,
     PendientesPage,
-    TabsPage
+    TabsPage,
+    ModalpendientesPage,
+    ConsultaMPage,
+    ConsultaonlinePage,
+    ConsultaMPerfilPage
   ],
   imports: [
     BrowserModule,
@@ -80,7 +90,11 @@ const cloudSettings: CloudSettings = {
     ConsultasPage,
     OncochatPage,
     PendientesPage,
-    TabsPage
+    TabsPage,
+    ModalpendientesPage,
+    ConsultaMPage,
+    ConsultaonlinePage,
+    ConsultaMPerfilPage
   ],
   providers: [
     StatusBar,

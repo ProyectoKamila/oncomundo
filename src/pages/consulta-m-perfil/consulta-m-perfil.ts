@@ -1,31 +1,27 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { ConsultaMPage } from './../consulta-m/consulta-m';
-
-
 /**
- * Generated class for the ConsultasPage page.
+ * Generated class for the ConsultaMPerfilPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 @IonicPage()
 @Component({
-  selector: 'page-consultas',
-  templateUrl: 'consultas.html',
+  selector: 'page-consulta-m-perfil',
+  templateUrl: 'consulta-m-perfil.html',
 })
-export class ConsultasPage {
+export class ConsultaMPerfilPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ConsultasPage');
+    console.log('ionViewDidLoad ConsultaMPerfilPage');
   }
-  
-  consultas_M(){
-    this.navCtrl.push(ConsultaMPage);
+  back(){
+    this.navCtrl.pop();
   }
 
 }

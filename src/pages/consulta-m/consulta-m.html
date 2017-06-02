@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-toolbar class="rosa">
+     	<ion-title text-center>Consultas Medicos</ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="back()">
+          <ion-icon name="arrow-back"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar (ionInput)="onInput($event)"  placeholder="consultar medico"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo">
+  <ion-list *ngFor="let item of items">
+    <ion-card (click)="perfilmedico()">
+      <img src="../assets/img/consultas.jpeg"/>
+      <div class="card-title" style="color:black;">{{ item }}</div>
+      <div class="card-subtitle">41 Listings</div>
+    </ion-card>
+
+    <!--<ion-card>
+      <img src="../assets/img/consultas.jpeg"/>
+      <div class="card-title">Amsterdam</div>
+      <div class="card-subtitle">64 Listings</div>
+    </ion-card>
+
+    <ion-card>
+      <img src="../assets/img/medicard.png"/>
+      <div class="card-title">San Francisco</div>
+      <div class="card-subtitle">72 Listings</div>
+    </ion-card>
+
+    <ion-card>
+      <img src="../assets/img/consultas.jpeg"/>
+      <div class="card-title">Madison</div>
+      <div class="card-subtitle">28 Listings</div>
+    </ion-card>-->
+  </ion-list>
+</ion-content>

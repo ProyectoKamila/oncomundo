@@ -1,18 +1,110 @@
-<!--
-  Generated template for the PendientesPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>pendientes</ion-title>
-  </ion-navbar>
+  <ion-toolbar class="rosa">
+     	<ion-title text-center>Pendientes</ion-title>
+  </ion-toolbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="fondo">
+
+  <ion-segment [(ngModel)]="pendiente" color="verde" padding>
+    <ion-segment-button value="examenes">
+      Examenes
+    </ion-segment-button>
+    <ion-segment-button value="medicamentos">
+      Medicamentos
+    </ion-segment-button>
+    <ion-segment-button value="consultas">
+      Consultas
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="pendiente">
+
+  <ion-list *ngSwitchCase="'examenes'">
+    <ion-card>
+      <ion-item>
+        <ion-avatar item-left>
+          <img src="../assets/img/doc.png">
+        </ion-avatar>
+      <h2>Dr.Oncomundo</h2>
+      <p>Medico Cirujano </p>
+      </ion-item>
+      <ion-card-content>
+        <p>El paciente debe de realizar los siguientes examenes para que podamos operarlo</p>
+        <ion-item>
+          <ion-label style="color:black;"> Examen de Prostata</ion-label>
+          <ion-toggle value checked="false"></ion-toggle>
+        </ion-item>
+        <ion-item>
+          <ion-label style="color:black;"> Radiografia</ion-label>
+          <ion-toggle checked="false"></ion-toggle>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-grid class="bottton">
+      <ion-row>
+        <ion-col col-12>
+          <button ion-button color="rosado" round (click)="presentProfileModal()">Crear Pendiente</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'medicamentos'">
+    <ion-card>
+      <ion-item>
+        <ion-avatar item-left>
+          <img src="../assets/img/doc.png">
+        </ion-avatar>
+      <h2>Dr.Oncomundo</h2>
+      <p>Medico Cirujano </p>
+      </ion-item>
+      <ion-card-content>
+        <p>El paciente debera comprar los siguientes medicamentos antes de poder operarlo</p>
+        <ion-item>
+          <ion-label style="color:black;"> Paracetamol</ion-label>
+          <ion-toggle value checked="false"></ion-toggle>
+        </ion-item>
+        <ion-item>
+          <ion-label style="color:black;"> Atamel</ion-label>
+          <ion-toggle checked="false"></ion-toggle>
+        </ion-item>
+        <ion-item>
+          <ion-label style="color:black;"> lolmetrasol</ion-label>
+          <ion-toggle checked="false"></ion-toggle>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-grid class="bottton">
+      <ion-row>
+        <ion-col col-12>
+          <button ion-button color="rosado" round>Crear Pendiente</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'consultas'">
+    <ion-card>
+      <ion-item>
+        <ion-avatar item-left>
+          <img src="../assets/img/doc.png">
+        </ion-avatar>
+      <h2>Dr.Oncomundo</h2>
+      <p>Medico Cirujano </p>
+      </ion-item>
+      <ion-card-content>
+        <p>Para darle fecha a la consulta debera terminar sus examenes y medicamentos pendientes, una vez listo , dale click a enviar</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+</div>
 
 </ion-content>

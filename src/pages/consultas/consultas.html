@@ -1,18 +1,24 @@
-<!--
-  Generated template for the ConsultasPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>consultas</ion-title>
-  </ion-navbar>
+  <ion-toolbar class="rosa">
+     	<ion-title text-center>Consultas</ion-title>
+  </ion-toolbar>
 
 </ion-header>
 
-
-<ion-content padding>
-
+<ion-content padding class="fondo">
+  <ion-grid class="verde">
+    <ion-row class="row">
+      <ion-col text-center col-12>
+        <button ion-button color="light" class="button-padding" round (click)="consultas_M()" >Consultas</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="rosado">
+    <ion-row class="row">
+        <ion-col text-center col-12>
+          <button ion-button color="light" round >Consultas Online</button>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
 </ion-content>

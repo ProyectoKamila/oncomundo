@@ -3,7 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Auth, User, UserDetails, IDetailedError } from '@ionic/cloud-angular';
 // import {Push,PushToken } from '@ionic/cloud-angular';
 import { ToastController } from 'ionic-angular';
-
+import * as io  from 'socket.io-client';
+import { LoadingController } from 'ionic-angular';
 
 import { PerfilPage } from '../perfil/perfil';
 import { TabsPage } from '../tabs/tabs';
@@ -18,8 +19,14 @@ export class LoginPage {
   password;
   matricula;
   registro;
-  constructor(public navCtrl: NavController, public navParams: NavParams,public auth: Auth, public user: User, public toastCtrl: ToastController) {
-  }
+  login
+  socketHost: string = "https://adminbj-proyectokamila.c9users.io:8082";
+  socket:any;
+  constructor(public navCtrl: NavController, public navParams: NavParams,public auth: Auth, public user: User, public toastCtrl: ToastController,public loadingCtrl: LoadingController) {
+      
+      this.socket = io.connect(this.socketHost);
+      this.socket.emit('conf',{'project': 'oncomundo.com'});
+}
 
   // public push: Push
   ionViewDidLoad() {
@@ -28,11 +35,30 @@ export class LoginPage {
   contrasena(){
       this.navCtrl.push("");
 }
-   perfil(){
-     console.log('Perfil');
-     console.log(this.email);
-       console.log(this.password);
-     if(this.email != undefined ||  this.password != undefined){
+   perfil(){  
+    let loader = this.loadingCtrl.create({
+        content: "Cargando...",
+      });
+      loader.present();  
+        this.socket.emit('signon',{'log':this.email,'pwd':this.password,'key':'index'});
+          this.socket.on('signon', (data, key) => {
+            console.log(data);
+            console.log(key);
+            console.log('aca si paso x signon');
+            if(key == 'index'){
+              console.log('aca si paso');
+             if(data != null){
+            console.log('el id');
+            this.login = data;
+            console.log(this.login);
+             }
+            }
+          });
+          loader.dismiss();
+     // if(this.login != null){
+          //console.log('entro en el if login');
+        if(this.email != undefined ||  this.password != undefined){
+
        let details = { 'email': this.email, 'password': this.password};
        
        this.auth.login('basic' , details).then(() => {
@@ -53,7 +79,7 @@ export class LoginPage {
               this.auth.logout();
               let toast = this.toastCtrl.create({
                 message: 'el medico no puede entrar como paciente',
-                duration: 3000
+                duration: 5000
             });
             toast.present();
             }
@@ -64,49 +90,56 @@ export class LoginPage {
       // }).then((t: PushToken) => {
       //   console.log('Token saved:', t.token);
       // });
-       }, (err) => {
+       } , (err) => {
            console.log('error  ');
              console.log(err);
               let toast = this.toastCtrl.create({
                 message: 'Su email o Password son incorrectos',
-                duration: 3000
+                duration: 5000
             });
             toast.present();
           });
      }else {
       let toast = this.toastCtrl.create({
         message: 'Verifique sus datos',
-        duration: 3000
+        duration: 5000
     });
     toast.present();
      }
     // this.navCtrl.push(Dashboard);
-}
+// }else {
+//           let toast = this.toastCtrl.create({
+//           message: 'Su email o Password son incorrectos',
+//           duration: 3000
+//       });
+//       toast.present();
+//    }
+  }
 change(id){
 		
-		console.log(id);
+	//	console.log(id);
 		if(id == 'email'){
-			console.log(this.email);
+		//	console.log(this.email);
 				if(this.email === ''){
-						console.log('ashdksajhadkjshdkj');
+					//	console.log('ashdksajhadkjshdkj');
 					document.getElementById(id).style.background	 = "transparent";
-						console.log(this.email);
+					//	console.log(this.email);
 					
 				}else{
 				document.getElementById(id).style.background	 = "#ecd4d0";
-							console.log(this.email);
+							//console.log(this.email);
 			}
 		}
 		if(id == 'password'){
-			console.log(this.password);
+			//console.log(this.password);
 				if(this.password === ''){
-						console.log('ashdksajhadkjshdkj');
+					//	console.log('ashdksajhadkjshdkj');
 					document.getElementById(id).style.background	 = "transparent";
-						console.log(this.password);
+					//	console.log(this.password);
 					
 				}else{
 				document.getElementById(id).style.background	 = "#ecd4d0";
-							console.log(this.password);
+							//console.log(this.password);
 			}
 		}
 

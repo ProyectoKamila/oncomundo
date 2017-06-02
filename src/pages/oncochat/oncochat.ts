@@ -17,7 +17,7 @@ import 'hammer-timejs';
 })
 export class OncochatPage {
   @ViewChild(Content) content:Content
-  message:any = [];
+  messages:any = [];
   socketHost: string = "https://adminbj-proyectokamila.c9users.io:8082";
   socket:any;
   chat:any;
@@ -26,10 +26,12 @@ export class OncochatPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.socket = io.connect(this.socketHost);
+    this.socket.emit('conf',{'project': 'bouquet.com'});
+
     this.zone = new NgZone({enableLongStackTrace: false});
     this.socket.on("chat message", (msg) =>{
       this.zone.run(() =>{
-        this.message.push(msg);
+        this.messages.push(msg);
         this.content.scrollToBottom();
       });
     });

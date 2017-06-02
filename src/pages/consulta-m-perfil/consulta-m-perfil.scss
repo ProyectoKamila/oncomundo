@@ -1,10 +1,10 @@
-page-pendientes {
+page-consulta-m-perfil {
      body, span, button, h1, h2, h3, h4, h5, h6 , p {
 	font-family: 'helvetica' !important;
 	}
     //header
     .fondo{
-        background-image: url(../assets/img/pendiente.jpg);
+        background-image: url(../assets/img/consultas.jpeg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -24,9 +24,7 @@ page-pendientes {
     .icon-perfil{
         color: black!important;
     }
-    .grid{
-        background: #ecd4d0; 
-    }
+
     .icon-perfil{
 		font-size: 30px;
 	    padding: 38px;
@@ -45,23 +43,45 @@ page-pendientes {
     ion-header{
         border: 1px solid #ecd4d0
     }
-    //footer
-    .button-round{
-            padding: 0px 6rem;
-        }
-        .transpa{
-            .toolbar-background{
-                background: transparent;
-            }
-        }
-        .footer-md::before{
-            background-image: none;
-        }
-    .bottton{
-        background: transparent;
-        position: absolute;
-        bottom: 0px;
-        text-align: center;
+    .toolbar-title-md{
+        padding: 0px 0px 0 50px;
     }
+     //header
+.top{
+    text-align: center;
+    padding: 0px 35px 0 0;
+}
+.avatar{
+    min-width: 46px;
+    min-height: 46px;
+    border: 1px solid #ecd4d0;
+    border-radius: 100%;
+    padding-top: 2px;
+    padding-left: 2px;
+}
+//content
+ion-item{
+     .item-inner{
+        border-bottom: 0px solid!important;
+    }
+}
+.col20{
+    border-radius: 100%;
+    border: 1px solid #ecd4d0;
+    max-width: 70px;
+    max-height: 70px;
+    background: #ecd4d0;
+    margin-top: 25px;
+    margin-right: 10px;
+}
+.border{
+    border-bottom: 1px solid #dedede;
+}
+.button{
+    margin: 1rem 0.2rem;
+    width: 60%;
+
+}
+//footer
 
 }

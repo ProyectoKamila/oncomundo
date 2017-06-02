@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar class="rosa">
+     	<ion-title text-center>Perfil Medico</ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="back()">
+          <ion-icon name="arrow-back"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-grid class="border">
+  <ion-row>
+    <ion-col class="col20" col-3>
+      <ion-avatar item-left>
+        <img style="border-radius: 100%" src="assets/img/doc.png">
+      </ion-avatar>
+    </ion-col>
+    <ion-col col-6>
+      <h4 style="color:#dc3155;"><strong>Dr. Oncomundo</strong></h4>
+      <p style="color:#444;text-align: justify">Lorem ipsum dolor sit amet,consectetur adipiscing elit. Integer eget felis velit. Maecenas dignissim dolor a gravida iaculis. Nam eget metus euismod nulla ultricies congue.</p>
+      <p style="color:#444;">cc santa fe valle arriba, baruta</p>
+    </ion-col>
+    <ion-col col-3 text-center>
+      <p style="color:#dedede;">20/05/2017</p>
+      <ion-note item-right color="fuzz">1:12 pm</ion-note>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+  <ion-grid text-center>
+    <ion-row>
+      <ion-col>
+        <button ion-button item-right color="fuzz"(click)="citaspendientes();">Aceptar</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button item-right color="fuzz"(click)="citaspendientes();">Cancelar</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
