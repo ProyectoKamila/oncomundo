@@ -40,7 +40,7 @@ export class LoginPage {
         content: "Cargando...",
       });
       loader.present();  
-        this.socket.emit('signon',{'log':this.email,'pwd':this.password,'key':'index'});
+        this.socket.emit('signon',{'log':this.email,'pwd':this.password,'key':'index',});
           this.socket.on('signon', (data, key) => {
             console.log(data);
             console.log(key);

@@ -5,6 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
 import { FormsModule } from '@angular/forms';
+//import { BackgroundGeolocation } from '@ionic-native/background-geolocation';
+import { Geolocation } from '@ionic-native/geolocation';
 
 import 'hammerjs';
 import 'hammer-timejs';
@@ -26,8 +28,8 @@ import { ModalpendientesPage } from '../pages/modalpendientes/modalpendientes';
 import { ConsultaMPage } from '../pages/consulta-m/consulta-m';
 import { ConsultaonlinePage } from '../pages/consultaonline/consultaonline';
 import { ConsultaMPerfilPage } from '../pages/consulta-m-perfil/consulta-m-perfil';
-
-
+import { GpsPage } from '../pages/gps/gps';
+import { LocationTrackerProvider } from '../providers/location-tracker/location-tracker';
 
 
 const cloudSettings: CloudSettings = {
@@ -65,7 +67,8 @@ const cloudSettings: CloudSettings = {
     ModalpendientesPage,
     ConsultaMPage,
     ConsultaonlinePage,
-    ConsultaMPerfilPage
+    ConsultaMPerfilPage,
+    GpsPage
   ],
   imports: [
     BrowserModule,
@@ -94,12 +97,15 @@ const cloudSettings: CloudSettings = {
     ModalpendientesPage,
     ConsultaMPage,
     ConsultaonlinePage,
-    ConsultaMPerfilPage
+    ConsultaMPerfilPage,
+    GpsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Geolocation,
+    LocationTrackerProvider,
   ]
 })
 export class AppModule {}

@@ -1,20 +1,57 @@
 <ion-header>
 
- <ion-toolbar>
-     	<ion-title text-center>Perfil Medico</ion-title>
+  <ion-toolbar class="verde">
+     	<ion-title text-center>Perfil</ion-title>
   </ion-toolbar>
 
 </ion-header>
 
 
-<ion-content padding class="fondo">
-    <ion-grid>
-      <ion-row>
-        <ion-col width-50 class="back-trans">
-      
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+<ion-content class="fondo">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col width-50 class="back-trans" ngIF="dates.photo">
+        <ion-thumbnail (click)="presentActionSheet();"><img src="{{dates.photo}}" class="image"></ion-thumbnail>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list>
+    <button ion-button round class="botonn" ngIF="horarios" id="horarios"> 
+			<ion-item class="input-color">
+				<ion-label fixed>HORARIOS:</ion-label>
+				<ion-input value="{{horarios}}" [(ngModel)]="dates.horarios" type="text"  name="horarios" required [ngModelOptions]="{standalone: true}" (ngModelChange)="change('horarios')" ></ion-input>
+			</ion-item>
+    </button>
+    <button ion-button round class="botonn" id="pais">
+			<ion-label><h4 class="tipo">Pais</h4></ion-label>
+			<ion-select [(ngModel)]="dates.pais" required [ngModelOptions]="{standalone: true} " (ngModelChange)="change('pais')">
+				<ion-option value="Peru">Peru</ion-option>
+				<ion-option value="Colombia">Colombia</ion-option>
+				<ion-option value="Venezuela">Venezuela</ion-option>
+				<ion-option value="otros">otros</ion-option>
+			</ion-select>
+    </button>
+    <button ion-button round class="botonn" id="estado">
+			<ion-label><h4 class="tipo">Estado</h4></ion-label>
+			<ion-select [(ngModel)]="dates.estado" required [ngModelOptions]="{standalone: true} " (ngModelChange)="change('estado')">
+				<ion-option value="Caracas">Caracas</ion-option>
+				<ion-option value="Merida">Merida</ion-option>
+				<ion-option value="Zulia">Zulia</ion-option>
+				<ion-option value="otros">otros</ion-option>
+			</ion-select>
+    </button>
+    <button ion-button round class="botonn2" color="verde" (click)="gps()">
+      GPS
+    </button>
+  </ion-list>
+
+    <div text-center style="margin: 20px 0;">
+			<form (ngSubmit)="ionperfil()">
+				<button ion-button color="verde" round>Registrar</button>
+			</form>  
+		</div>
 </ion-content>
 
 <ion-footer>
